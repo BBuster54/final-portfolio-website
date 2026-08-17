@@ -34,6 +34,7 @@ export const projects: Project[] = [
       "A professional software engineering portfolio built to showcase projects and give recruiters an easy way to learn about my work. Focused on clean, fast, modern design.",
     techStack: ["Next.js", "React", "TypeScript", "TailwindCSS"],
     githubUrl: "https://github.com/BBuster54/final-portfolio-website.git",
+    liveUrl: "https://final-portfolio-website.vercel.app/",
     imageUrl: "/images/portfolio-website.png",
   },
 ];

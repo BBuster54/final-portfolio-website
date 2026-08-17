@@ -32,6 +32,14 @@ export default function ProjectCard({ project }: ProjectCardProps) {
       >
         GitHub →
       </a>
-    </div>
+      {project.liveUrl && (
+        <a
+          href={project.liveUrl}
+          className="mt-4 ml-4 inline-block text-sm font-medium text-zinc-900 underline underline-offset-4 dark:text-zinc-50"
+        >
+          Live Demo →
+        </a>
+      )}
+   </div>
   );
 }

@@ -38,6 +38,14 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
       >
         View on GitHub →
       </a>
+      {project.liveUrl && (
+        <a
+          href={project.liveUrl}
+          className="mt-6 ml-4 inline-block text-sm font-medium text-zinc-900 underline underline-offset-4 dark:text-zinc-50"
+        >
+          View Live Demo →
+        </a>
+      )}
     </main>
   );
 }
