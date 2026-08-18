@@ -1,4 +1,6 @@
 import Link from "next/link";
+import Typewriter from "@/components/Typewriter";
+
 
 export default function Home() {
   return (
@@ -9,10 +11,9 @@ export default function Home() {
       <h1 className="mt-2 text-5xl font-bold text-zinc-900 dark:text-zinc-50 sm:text-6xl">
         Brandon Best
       </h1>
-      <p className="mt-4 text-lg text-zinc-600 dark:text-zinc-400">
-        Chemistry &amp; Biochemistry student who builds software to make
-        sense of data. I turn research problems into working tools.
-      </p>
+      <p className="mt-4 min-h-[3.5rem] text-lg text-zinc-600 dark:text-zinc-400">
+  <Typewriter text="Chemistry & Biochemistry student who builds software to make sense of data. I turn research problems into working tools." />
+</p>
       <div className="mt-8 flex gap-4">
         <Link
           href="/projects"
