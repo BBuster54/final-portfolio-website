@@ -25,27 +25,28 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
         {project.techStack.map((tech) => (
           <li
             key={tech}
-            className="rounded-full bg-zinc-100 px-3 py-1 text-xs font-medium text-zinc-700 dark:bg-zinc-800 dark:text-zinc-300"
+            className="rounded-full bg-zinc-100 px-3 py-1 font-mono text-xs font-medium text-zinc-700 dark:bg-zinc-800 dark:text-zinc-300"
           >
             {tech}
           </li>
         ))}
       </ul>
-
-      <a
-        href={project.githubUrl}
-        className="mt-6 inline-block text-sm font-medium text-zinc-900 underline underline-offset-4 dark:text-zinc-50"
-      >
-        View on GitHub →
-      </a>
-      {project.liveUrl && (
+      <div className="mt-6 flex gap-4 font-mono text-xs uppercase tracking-wide">
         <a
-          href={project.liveUrl}
-          className="mt-6 ml-4 inline-block text-sm font-medium text-zinc-900 underline underline-offset-4 dark:text-zinc-50"
+          href={project.githubUrl}
+          className="text-zinc-900 underline underline-offset-4 transition-colors hover:text-accent dark:text-zinc-50"
         >
-          View Live Demo →
+          View on GitHub →
         </a>
-      )}
+        {project.liveUrl && (
+          <a
+            href={project.liveUrl}
+            className="text-zinc-900 underline underline-offset-4 transition-colors hover:text-accent dark:text-zinc-50"
+          >
+            View Live Demo →
+          </a>
+        )}
+      </div>
     </main>
   );
 }

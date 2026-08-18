@@ -19,15 +19,13 @@ export default function AboutPage() {
       <h1 className="text-3xl font-bold text-zinc-900 dark:text-zinc-50">
         About Me
       </h1>
-
       <a
         href="/resume.pdf"
         download
-        className="mt-4 inline-block rounded-full bg-zinc-900 px-5 py-2.5 text-sm font-medium text-white transition hover:bg-zinc-700 dark:bg-zinc-50 dark:text-zinc-900 dark:hover:bg-zinc-200"
+        className="mt-4 inline-block rounded-full bg-accent px-5 py-2.5 text-sm font-medium text-white transition-colors hover:bg-zinc-900 dark:hover:bg-zinc-50 dark:hover:text-zinc-900"
       >
         Download Resume
       </a>
-
       <div className="mt-6 space-y-4 text-zinc-600 dark:text-zinc-400">
         <p>
           I&apos;m a Chemistry, Biochemistry, and Physics student at
@@ -52,21 +50,23 @@ export default function AboutPage() {
           Outside of school and code, I play tennis, read, write, and
           volunteer with organizations like Jersey Cares and the YMCA/YWCA.
         </p>
-      </div><section className="mt-12">
+      </div>
+
+      <section className="mt-12">
         <h2 className="text-2xl font-bold text-zinc-900 dark:text-zinc-50">
           Skills
         </h2>
         <div className="mt-6 space-y-6">
           {skills.map((group) => (
             <div key={group.category}>
-              <h3 className="text-sm font-semibold uppercase tracking-wide text-zinc-500 dark:text-zinc-400">
+              <h3 className="font-mono text-xs uppercase tracking-wide text-accent">
                 {group.category}
               </h3>
               <ul className="mt-2 flex flex-wrap gap-2">
                 {group.items.map((item) => (
                   <li
                     key={item}
-                    className="rounded-full bg-zinc-100 px-3 py-1 text-xs font-medium text-zinc-700 dark:bg-zinc-800 dark:text-zinc-300"
+                    className="rounded-full bg-zinc-100 px-3 py-1 font-mono text-xs font-medium text-zinc-700 dark:bg-zinc-800 dark:text-zinc-300"
                   >
                     {item}
                   </li>
