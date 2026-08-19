@@ -1,4 +1,5 @@
 import { Project } from "@/data/projects";
+import Image from "next/image";
 import Link from "next/link";
 
 interface ProjectCardProps {
@@ -7,7 +8,21 @@ interface ProjectCardProps {
 
 export default function ProjectCard({ project }: ProjectCardProps) {
   return (
-    <div className="rounded-2xl border border-zinc-200 p-6 shadow-sm transition-all hover:-translate-y-0.5 hover:border-accent hover:shadow-md dark:border-zinc-800">
+    <article className="overflow-hidden rounded-2xl border border-zinc-200 bg-white shadow-sm transition-all hover:-translate-y-0.5 hover:border-accent hover:shadow-md dark:border-zinc-800 dark:bg-zinc-950">
+      <Link
+        href={`/projects/${project.slug}`}
+        className="relative block aspect-video overflow-hidden bg-zinc-100 dark:bg-zinc-900"
+        aria-label={`Read more about ${project.title}`}
+      >
+        <Image
+          src={project.imageUrl}
+          alt={`Screenshot of ${project.title}`}
+          fill
+          sizes="(max-width: 640px) 100vw, 50vw"
+          className="object-cover transition-transform duration-300 hover:scale-105"
+        />
+      </Link>
+      <div className="p-6">
       <Link href={`/projects/${project.slug}`}>
         <h3 className="text-xl font-semibold text-zinc-900 transition-colors hover:text-accent dark:text-zinc-50">
           {project.title}
@@ -42,6 +57,7 @@ export default function ProjectCard({ project }: ProjectCardProps) {
           </a>
         )}
       </div>
-    </div>
+      </div>
+    </article>
   );
 }
