@@ -1,17 +1,4 @@
-const skills = [
-  {
-    category: "Languages & Tools",
-    items: ["Java", "JavaScript", "Python", "Google Workspace", "Microsoft Office"],
-  },
-  {
-    category: "Currently Learning",
-    items: ["React", "Next.js", "TypeScript", "SQL", "C"],
-  },
-  {
-    category: "Core Strengths",
-    items: ["Problem-Solving", "Time Management", "Team Collaboration", "Adaptability"],
-  },
-];
+import SkillsBento from "@/components/SkillsBento";
 
 export default function AboutPage() {
   return (
@@ -52,30 +39,7 @@ export default function AboutPage() {
         </p>
       </div>
 
-      <section className="mt-12">
-        <h2 className="text-2xl font-bold text-zinc-900 dark:text-zinc-50">
-          Skills
-        </h2>
-        <div className="mt-6 space-y-6">
-          {skills.map((group) => (
-            <div key={group.category}>
-              <h3 className="font-mono text-xs uppercase tracking-wide text-accent">
-                {group.category}
-              </h3>
-              <ul className="mt-2 flex flex-wrap gap-2">
-                {group.items.map((item) => (
-                  <li
-                    key={item}
-                    className="rounded-full bg-zinc-100 px-3 py-1 font-mono text-xs font-medium text-zinc-700 dark:bg-zinc-800 dark:text-zinc-300"
-                  >
-                    {item}
-                  </li>
-                ))}
-              </ul>
-            </div>
-          ))}
-        </div>
-      </section>
+      <SkillsBento />
     </main>
   );
 }

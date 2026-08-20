@@ -37,4 +37,14 @@ export const projects: Project[] = [
     liveUrl: "https://final-portfolio-website.vercel.app/",
     imageUrl: "/images/portfolio-website.png",
   },
+
+  {
+  slug: "urban-insight",
+  title: "Urban Insight",
+  description: "...", // unchanged
+  techStack: ["HTML", "CSS", "JavaScript"],
+  githubUrl: "https://github.com/BBuster54/Brandon-Projects-/tree/main/urban-insight-platform",
+  liveUrl: "/demos/urban-insight/index.html",
+  imageUrl: "/images/urban-insight.png",
+},
 ];

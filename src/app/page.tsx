@@ -6,10 +6,10 @@ export default function Home() {
   return (
     <main className="mx-auto flex max-w-3xl flex-1 flex-col items-start justify-center px-6 py-24">
       <p className="font-mono text-xs uppercase tracking-wide text-accent">
-        Hi, I&apos;m
+        Software engineering portfolio
       </p>
       <h1 className="mt-2 text-5xl font-bold text-zinc-900 dark:text-zinc-50 sm:text-6xl">
-        Brandon Best
+        Turning research into useful software.
       </h1>
       <p className="mt-4 min-h-[3.5rem] text-lg text-zinc-600 dark:text-zinc-400">
   <Typewriter text="Chemistry & Biochemistry student who builds software to make sense of data. I turn research problems into working tools." />

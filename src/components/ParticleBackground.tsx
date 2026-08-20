@@ -28,19 +28,23 @@ export default function ParticleBackground() {
     const CONNECT_DISTANCE = 130;
     const MOUSE_RADIUS = 160;
 
-    interface Particle {
-      x: number;
-      y: number;
-      vx: number;
-      vy: number;
-    }
+interface Particle {
+  x: number;
+  y: number;
+  vx: number;
+  vy: number;
+  floatPhase: number;
+  floatSpeed: number;
+}
 
-    const particles: Particle[] = Array.from({ length: PARTICLE_COUNT }, () => ({
-      x: Math.random() * width,
-      y: Math.random() * height,
-      vx: (Math.random() - 0.5) * 0.3,
-      vy: (Math.random() - 0.5) * 0.3,
-    }));
+const particles: Particle[] = Array.from({ length: PARTICLE_COUNT }, () => ({
+  x: Math.random() * width,
+  y: Math.random() * height,
+  vx: (Math.random() - 0.5) * 0.4,
+  vy: (Math.random() - 0.5) * 0.4,
+  floatPhase: Math.random() * Math.PI * 2,
+  floatSpeed: 0.4 + Math.random() * 0.4,
+}));
 
     const mouse = { x: -9999, y: -9999 };
 
@@ -90,15 +94,16 @@ export default function ParticleBackground() {
       if (!ctx) return;
       ctx.clearRect(0, 0, width, height);
 
-      for (const p of particles) {
-        p.x += p.vx;
-        p.y += p.vy;
-        // gentle damping so click-impulses settle back down over time
-        p.vx *= 0.98;
-        p.vy *= 0.98;
-        if (p.x < 0 || p.x > width) p.vx *= -1;
-        if (p.y < 0 || p.y > height) p.vy *= -1;
-      }
+   const time = performance.now() / 1000;
+for (const p of particles) {
+  p.x += p.vx;
+  p.y += p.vy + Math.sin(time * p.floatSpeed + p.floatPhase) * 0.15;
+  // gentle damping so click-impulses settle back down over time
+  p.vx *= 0.98;
+  p.vy *= 0.98;
+  if (p.x < 0 || p.x > width) p.vx *= -1;
+  if (p.y < 0 || p.y > height) p.vy *= -1;
+}
 
       for (let i = 0; i < particles.length; i++) {
         for (let j = i + 1; j < particles.length; j++) {
