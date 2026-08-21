@@ -1,0 +1,77 @@
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  background: #f5f5f4;
+  color: #1c1917;
+}
+
+.header {
+  background: linear-gradient(135deg, #b8863c 0%, #6b9e78 100%);
+  color: #fff;
+  padding: 2rem 1.5rem;
+}
+
+.header h1 { margin: 0 0 0.5rem; font-size: 2rem; }
+.header p { margin: 0; opacity: 0.9; }
+
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 2rem 1.5rem;
+}
+
+.form-card, .notes {
+  background: #fff;
+  border: 1px solid #e7e5e4;
+  border-radius: 12px;
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.field { margin-bottom: 1rem; }
+.field label { display: block; font-weight: 600; margin-bottom: 0.35rem; font-size: 0.9rem; }
+.field select, .field input {
+  width: 100%;
+  padding: 0.6rem;
+  border: 1px solid #d6d3d1;
+  border-radius: 8px;
+  font-size: 1rem;
+}
+
+.btn-primary, .btn-secondary {
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+.btn-primary { background: #b8863c; color: #fff; }
+.btn-secondary { background: #fff; border: 1px solid #b8863c; color: #b8863c; margin-top: 1rem; }
+
+.total-card {
+  background: #fff;
+  border: 1px solid #e7e5e4;
+  border-radius: 12px;
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+.total-label { display: block; font-size: 0.85rem; color: #78716c; }
+.total-value { display: block; font-size: 2.5rem; font-weight: 700; color: #b8863c; }
+
+.chart-card {
+  background: #fff;
+  border: 1px solid #e7e5e4;
+  border-radius: 12px;
+  padding: 1.5rem;
+}
+
+.notes ul { padding-left: 1.2rem; color: #57534e; font-size: 0.9rem; }
+.disclaimer { font-size: 0.85rem; color: #78716c; font-style: italic; }
+
+.footer { text-align: center; padding: 1.5rem; color: #78716c; font-size: 0.85rem; }

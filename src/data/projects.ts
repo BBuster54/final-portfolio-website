@@ -26,6 +26,7 @@ export const projects: Project[] = [
     techStack: ["Python", "Matplotlib"],
     githubUrl: "https://github.com/BBuster54/Brandon-Projects-/tree/main/carbon-footprint-tracker",
     imageUrl: "/images/carbon-footprint-tracker.png",
+       liveUrl: "/demos/carbon-footprint-tracker/index.html",
   },
   {
     slug: "personal-portfolio-website",

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Carbon Footprint Tracker</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="header">
+    <h1>Carbon Footprint Tracker</h1>
+    <p>Estimate your monthly CO₂ footprint from transportation, home energy, and diet.</p>
+  </header>
+
+  <main class="container">
+    <section class="form-card">
+      <div class="field">
+        <label for="transportMode">Transportation Mode</label>
+        <select id="transportMode">
+          <option value="car">Car</option>
+          <option value="bus">Bus</option>
+          <option value="train">Train</option>
+          <option value="bike">Bike</option>
+        </select>
+      </div>
+      <div class="field">
+        <label for="milesPerWeek">Miles per Week</label>
+        <input type="number" id="milesPerWeek" value="50" min="0" />
+      </div>
+      <div class="field">
+        <label for="electricity">Electricity Use (kWh/month)</label>
+        <input type="number" id="electricity" value="600" min="0" />
+      </div>
+      <div class="field">
+        <label for="diet">Diet</label>
+        <select id="diet">
+          <option value="meat">Meat-heavy</option>
+          <option value="average" selected>Average / Mixed</option>
+          <option value="vegetarian">Vegetarian</option>
+          <option value="vegan">Vegan</option>
+        </select>
+      </div>
+      <button id="calculateBtn" class="btn-primary">Calculate Footprint</button>
+    </section>
+
+    <section class="results" id="results" hidden>
+      <div class="total-card">
+        <span class="total-label">Estimated Monthly Footprint</span>
+        <span class="total-value" id="totalValue">0 kg CO₂</span>
+      </div>
+      <div class="chart-card">
+        <canvas id="breakdownChart"></canvas>
+      </div>
+      <button id="exportBtn" class="btn-secondary">Export as CSV</button>
+    </section>
+
+    <section class="notes">
+      <h2>Methodology</h2>
+      <ul>
+        <li>Transportation: emission rate × miles/week × 4.33 (weeks/month)</li>
+        <li>Home energy: kWh/month × 0.4 kg CO₂/kWh (U.S. average grid estimate)</li>
+        <li>Diet: category-based daily estimate × 30 days</li>
+      </ul>
+      <p class="disclaimer">All emission factors are illustrative estimates for demonstration purposes, not precise scientific measurements.</p>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>Built by Brandon Best &mdash; exploring environmental data through software.</p>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
