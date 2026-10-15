@@ -5,10 +5,20 @@ export interface Project {
   techStack: string[];
   githubUrl: string;
   liveUrl?: string;
-  imageUrl: string;
+  imageUrl?: string;
 }
 
 export const projects: Project[] = [
+  {
+    slug: "finance-dashboard",
+    title: "Finance Dashboard",
+    description:
+      "A responsive personal-finance dashboard that combines account tracking with live equity and crypto market data. Provider requests are validated, cached, rate-aware, and designed to fail gracefully.",
+    techStack: ["Next.js", "React", "TypeScript", "Tailwind CSS", "REST APIs"],
+    githubUrl:
+      "https://github.com/BBuster54/Brandon-Projects-/tree/main/projects/finance-dashboard",
+    liveUrl: "https://brandon-projects.vercel.app/",
+  },
   {
     slug: "urban-insight",
     title: "Urban Insight",

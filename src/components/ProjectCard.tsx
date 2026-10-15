@@ -24,13 +24,31 @@ export default function ProjectCard({ project }: ProjectCardProps) {
           <span className="h-2.5 w-2.5 rounded-full bg-emerald-400" />
         </div>
         <div className="relative aspect-[16/10] overflow-hidden">
-          <Image
-            src={project.imageUrl}
-            alt={`Screenshot of ${project.title}`}
-            fill
-            sizes="(max-width: 768px) 100vw, 50vw"
-            className="object-cover transition-transform duration-500 group-hover:scale-[1.03]"
-          />
+          {project.imageUrl ? (
+            <Image
+              src={project.imageUrl}
+              alt={`Screenshot of ${project.title}`}
+              fill
+              sizes="(max-width: 768px) 100vw, 50vw"
+              className="object-cover transition-transform duration-500 group-hover:scale-[1.03]"
+            />
+          ) : (
+            <div className="flex h-full flex-col justify-between bg-[radial-gradient(circle_at_85%_15%,rgba(184,134,60,0.28),transparent_32%),linear-gradient(135deg,#18181b,#27272a)] p-5 text-zinc-50">
+              <div className="flex items-center justify-between font-mono text-[10px] font-medium uppercase tracking-[0.18em] text-zinc-400">
+                <span>Live market data</span>
+                <span className="h-2 w-2 rounded-full bg-emerald-400 shadow-[0_0_12px_rgba(52,211,153,0.9)]" />
+              </div>
+              <div>
+                <p className="font-mono text-xs uppercase tracking-[0.2em] text-amber-200/80">Personal finance</p>
+                <p className="mt-2 text-2xl font-extrabold tracking-tight">{project.title}</p>
+              </div>
+              <div className="grid grid-cols-3 gap-2" aria-hidden="true">
+                <span className="h-8 rounded bg-white/10" />
+                <span className="h-8 rounded bg-white/15" />
+                <span className="h-8 rounded bg-accent/70" />
+              </div>
+            </div>
+          )}
         </div>
       </Link>
 
