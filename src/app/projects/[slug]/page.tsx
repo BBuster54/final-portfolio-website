@@ -31,6 +31,14 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
           </li>
         ))}
       </ul>
+      {project.slug === "urban-insight" && (
+        <section className="mt-10 space-y-4 text-zinc-700 dark:text-zinc-300" aria-label="How Urban Insight works">
+          <h2 className="text-xl font-bold">How it works</h2>
+          <p>Explore five cities through a cooperative-touch map or its keyboard-accessible city directory. Compare the same metric across cities, share a filtered view, or export values with their sources and reference dates.</p>
+          <h2 className="text-xl font-bold">Data sources and limitations</h2>
+          <p>Air quality uses the coarse CAMS global model via Open-Meteo, not local monitor observations. Failed requests fall back to a labeled last-good cache, then neutral sample markers. Official housing and commute figures are Census ACS five-year survey estimates; owner-reported home values are not sale prices.</p>
+        </section>
+      )}
       <div className="mt-6 flex gap-4 font-mono text-xs uppercase tracking-wide">
         <a
           href={project.githubUrl}
