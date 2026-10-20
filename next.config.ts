@@ -5,6 +5,13 @@ const nextConfig: NextConfig = {
   turbopack: {
     root: __dirname,
   },
+  async redirects() {
+    return [{
+      source: "/demos/carbon-footprint-tracker",
+      destination: "/demos/carbon-footprint-tracker/index.html",
+      permanent: false,
+    }];
+  },
   async headers() {
     return [{
       source: "/demos/carbon-footprint-tracker/:path*",
