@@ -1,5 +1,15 @@
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
+## Carbon Footprint Tracker demo
+
+The build-free demo at `public/demos/carbon-footprint-tracker/` is generated from the canonical [Brandon-Projects calculator](https://github.com/BBuster54/Brandon-Projects-/tree/main/carbon-footprint-tracker).
+Run `npm run sync` in that project's folder to update this copy. Its shared factors use a version, SHA-256 checksum and canonical commit recorded in `data/sync-manifest.json`.
+Run `node scripts/check-carbon-sync.mjs` to verify the local copy against the exact canonical revision. GitHub Actions runs the same check.
+The canonical repository contains Vitest, pytest, Lighthouse CI, methodology, source verification tasks and setup instructions. Security headers for the demo are defined in `next.config.ts`.
+Review feature-branch Vercel previews before merging to main.
+
+The demo includes six-category live results, conservative uncertainty bounds, baseline scenarios, goals, browser-local monthly history, shareable input URLs, CSV/JSON/PNG exports and a print report. Its project card uses a current screenshot and describes both the browser calculator and Python CLI. See the canonical project's `QA.md` for viewport screenshots, keyboard results, model limitations and the known-problem changelog.
+
 ## Getting Started
 
 First, run the development server:

@@ -32,8 +32,8 @@ export const projects: Project[] = [
     slug: "carbon-footprint-tracker",
     title: "Carbon Footprint Tracker",
     description:
-      "A Python application that calculates and visualizes individual carbon footprints based on user input. Uses Matplotlib for data visualization, with CSV import/export functionality for tracking data over time.",
-    techStack: ["Python", "Matplotlib"],
+      "A live six-category carbon footprint calculator and Python CLI sharing a versioned emissions model. Explore scenarios, goals, local history, uncertainty ranges, and downloadable reports.",
+    techStack: ["JavaScript", "Python", "HTML", "CSS"],
     githubUrl: "https://github.com/BBuster54/Brandon-Projects-/tree/main/carbon-footprint-tracker",
     imageUrl: "/images/carbon-footprint-tracker.png",
        liveUrl: "/demos/carbon-footprint-tracker/index.html",
