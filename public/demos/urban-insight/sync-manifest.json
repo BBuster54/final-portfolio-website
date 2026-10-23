@@ -1,12 +1,14 @@
 {
   "version": "2.0.0",
-  "revision": "6ec7fe1ec12d96fa2fd1c7cab97e8e1cc6751c6c",
+  "revision": "f3b8ddf9446dd104e10605dff0f69683a022d96d",
   "canonical": "BBuster54/Brandon-Projects-/urban-insight-platform",
   "files": {
-    "index.html": "fb4cf0393cf9ef4eaa7a7eb558fe0d087c892250900ace36110ec7dd5c47709c",
+    "index.html": "e3380a7a7edcea82056c1db08415e95af60e3e1c504ce0d159cc2b3df42948a8",
     "favicon.svg": "5437a228912e3241794b5ea18a1ac27aa99255c25895755c7ff143e9451dfc22",
+    "css/atlas.css": "7dbe8977c1906230c9ab387b478291f6c389486975ac1f56ffb23086ac3f3e3f",
     "css/styles.css": "0a786bec9379f24e7feb6d75b66f42cf58c67fb1931ac05f8e6917f58f2d2d28",
     "js/aqi.js": "2f784020ce048baf7a8a1b66a551c70648f9400c00f1f016d86ea30755bf4f38",
+    "js/atlas.js": "3bb49689aee5ffbf0cbb45305f1e9af7261e6d9c5972eb2cfd47efb3c41810ed",
     "js/contrast.js": "a2e64368081ce852bc10c37c3e7f085786d5fc8779970b80fa8f734369ac44f8",
     "js/data/cities.js": "8f86ae1eb3a15630b25f279c7081cd4391e3e7316e4047ddeab76e09a19da408",
     "js/data/normalize.js": "94e8cf8c98aa1459dbb36b4b40afa2ed7f5ad74c5c2c0a9867e001d3a0d05d1a",
