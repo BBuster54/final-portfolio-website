@@ -2,7 +2,7 @@
 export function rampLayout(
   values,
   width,
-  { labelWidth = 176, gap = 8, maxLanes = 5 } = {},
+  { labelWidth = 200, gap = 12, maxLanes = 3 } = {},
 ) {
   const lanes = [];
   const items = values.map((value, index) => ({
