@@ -16,6 +16,8 @@ The single Urban Insight project links to `/demos/urban-insight/index.html`. Its
 
 ## Getting Started
 
+Urban Insight now uses the distinct Urban Atlas presentation: parchment/umber chrome, self-hosted Fraunces headings, mono figures/timestamps, a map-led layout, contrast-safe EPA ramp, compact provenance controls, and stacked phone tables. The reflection placeholders remain hidden; `npm run build` runs a prebuild guard that rejects exposure or fonts over 150 KB. The canonical project's `ATLAS-REVIEW.md` contains paired 375/768/1440 screenshots, the complete contrast table, collision rules, keyboard results and Lighthouse results. Data/provider behavior and the original regression tests are unchanged.
+
 First, run the development server:
 
 ```bash
