@@ -10,7 +10,13 @@ Review feature-branch Vercel previews before merging to main.
 
 The demo includes six-category live results, conservative uncertainty bounds, baseline scenarios, goals, browser-local monthly history, shareable input URLs, CSV/JSON/PNG exports and a print report. Its project card uses a current screenshot and describes both the browser calculator and Python CLI. See the canonical project's `QA.md` for viewport screenshots, keyboard results, model limitations and the known-problem changelog.
 
+## Urban Insight demo
+
+The single Urban Insight project links to `/demos/urban-insight/index.html`. Its canonical source is `Brandon-Projects-/urban-insight-platform`; run `npm run sync` there after committing changes. `node scripts/check-urban-sync.mjs` verifies every copied file against SHA-256 checksums and the pinned canonical commit, and rejects duplicate Urban project slugs. GitHub Actions runs this check. The demo's CSP allows only Open-Meteo for live air requests and OpenStreetMap for tiles; fonts, Leaflet and gesture handling are self-hosted. Census credentials never ship to the browser. See the canonical README and QA report for methods, fixtures and browser checks.
+
 ## Getting Started
+
+Urban Insight now uses the distinct Urban Atlas presentation: parchment/umber chrome, self-hosted Fraunces headings, mono figures/timestamps, a map-led layout, contrast-safe EPA ramp, compact provenance controls, and stacked phone tables. The reflection placeholders remain hidden; `npm run build` runs a prebuild guard that rejects exposure or fonts over 150 KB. The canonical project's `ATLAS-REVIEW.md` contains paired 375/768/1440 screenshots, the complete contrast table, collision rules, keyboard results and Lighthouse results. Data/provider behavior and the original regression tests are unchanged.
 
 First, run the development server:
 

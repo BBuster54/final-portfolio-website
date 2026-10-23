@@ -23,9 +23,10 @@ export const projects: Project[] = [
     slug: "urban-insight",
     title: "Urban Insight",
     description:
-      "A city analytics platform with real-time data visualizations for urban metrics like air quality, traffic, and waste. Features interactive dashboards with dynamic charts, map-based overlays, and filtering tools for data accessibility.",
-    techStack: ["HTML", "CSS", "JavaScript"],
+      "A five-city explorer combining modeled air quality with official Census housing and commuting estimates. Compare cities, inspect sources and freshness, and export data through an accessible map and table interface.",
+    techStack: ["JavaScript", "Leaflet", "Census ACS", "Open-Meteo"],
     githubUrl: "https://github.com/BBuster54/Brandon-Projects-/tree/main/urban-insight-platform",
+    liveUrl: "/demos/urban-insight/index.html",
     imageUrl: "/images/urban-insight.png",
   },
   {
@@ -48,14 +49,4 @@ export const projects: Project[] = [
     liveUrl: "https://final-portfolio-website.vercel.app/",
     imageUrl: "/images/portfolio-website.png",
   },
-
-  {
-  slug: "urban-insight",
-  title: "Urban Insight",
-  description: "...", // unchanged
-  techStack: ["HTML", "CSS", "JavaScript"],
-  githubUrl: "https://github.com/BBuster54/Brandon-Projects-/tree/main/urban-insight-platform",
-  liveUrl: "/demos/urban-insight/index.html",
-  imageUrl: "/images/urban-insight.png",
-},
 ];
