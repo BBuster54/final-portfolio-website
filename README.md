@@ -12,6 +12,8 @@ The demo includes six-category live results, conservative uncertainty bounds, ba
 
 ## Urban Insight demo
 
+The portfolio listing is titled **Urban Atlas** and describes the latest map-led presentation, EPA AQI gauge, local-time trends, comparisons, URL sharing, and CSV exports. The existing `urban-insight` project slug and demo path are retained so previously shared links continue to work. The listing and detail page distinguish modeled air quality from official Census estimates rather than implying local monitor readings.
+
 The single Urban Insight project links to `/demos/urban-insight/index.html`. Its canonical source is `Brandon-Projects-/urban-insight-platform`; run `npm run sync` there after committing changes. `node scripts/check-urban-sync.mjs` verifies every copied file against SHA-256 checksums and the pinned canonical commit, and rejects duplicate Urban project slugs. GitHub Actions runs this check. The demo's CSP allows only Open-Meteo for live air requests and OpenStreetMap for tiles; fonts, Leaflet and gesture handling are self-hosted. Census credentials never ship to the browser. See the canonical README and QA report for methods, fixtures and browser checks.
 
 ## Getting Started

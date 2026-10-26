@@ -32,11 +32,13 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
         ))}
       </ul>
       {project.slug === "urban-insight" && (
-        <section className="mt-10 space-y-4 text-zinc-700 dark:text-zinc-300" aria-label="How Urban Insight works">
-          <h2 className="text-xl font-bold">How it works</h2>
-          <p>Explore five cities through a cooperative-touch map or its keyboard-accessible city directory. Compare the same metric across cities, share a filtered view, or export values with their sources and reference dates.</p>
+        <section className="mt-10 space-y-4 text-zinc-700 dark:text-zinc-300" aria-label="How Urban Atlas works">
+          <h2 className="text-xl font-bold">Explore five cities, with context</h2>
+          <p>Urban Atlas brings New York, Los Angeles, Chicago, Houston, and Phoenix into a map-led interface with light and dark themes. A segmented EPA AQI gauge shows air-quality categories in text as well as color, while recent modeled trends include local timestamps and a readable data table.</p>
+          <h2 className="text-xl font-bold">Compare, share, and inspect</h2>
+          <p>Compare cities on the same metric, share a filtered view through its URL, or export CSV data with sources and reference dates. Cooperative touch gestures, a keyboard-accessible city directory, stacked mobile tables, and a print layout provide alternatives to exploring the map.</p>
           <h2 className="text-xl font-bold">Data sources and limitations</h2>
-          <p>Air quality uses the coarse CAMS global model via Open-Meteo, not local monitor observations. Failed requests fall back to a labeled last-good cache, then neutral sample markers. Official housing and commute figures are Census ACS five-year survey estimates; owner-reported home values are not sale prices.</p>
+          <p>Air quality uses the coarse CAMS global model via Open-Meteo, not local monitor observations. Failed requests fall back to a labeled last-good cache, then neutral sample markers with no current reading. Housing and commuting data come from the 2024 Census ACS five-year estimates (2020–2024); homeowner-reported values are not sale prices. Source details and freshness remain visible so modeled, official, stale, and sample data are distinguishable.</p>
         </section>
       )}
       <div className="mt-6 flex gap-4 font-mono text-xs uppercase tracking-wide">
